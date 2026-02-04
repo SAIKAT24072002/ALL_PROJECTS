@@ -1,0 +1,113 @@
+/* =========================
+   RESET & GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header h1 {
+  font-size: clamp(22px, 4vw, 36px);
+  margin-bottom: 12px;
+}
+
+.header button {
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   GAME BOARD
+========================= */
+.game-container {
+  width: 100%;
+  max-width: 420px; /* prevents extra columns */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+.card {
+  aspect-ratio: 1 / 1; /* perfect square */
+  background-color: #34495e;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(20px, 6vw, 32px);
+  color: transparent;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.card.flipped {
+  background-color: #1abc9c;
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+@media (max-width: 360px) {
+  .game-container {
+    gap: 8px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   TABLETS
+========================= */
+@media (min-width: 600px) {
+  .game-container {
+    max-width: 480px;
+    gap: 14px;
+  }
+}
+
+/* =========================
+   LARGE SCREENS
+========================= */
+@media (min-width: 1024px) {
+  .game-container {
+    max-width: 520px;
+  }
+}
