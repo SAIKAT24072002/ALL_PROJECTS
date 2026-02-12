@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  font-weight: 700;
+  color: red;
+  font-family: san-serif;
+  font-size: 25px;
+}
+
+.mainContainer {
+  width: 50%;
+  margin: 20px auto;
+  border: 1px solid black;
+  text-align: start;
+  padding: 15px 25px 20px 30px;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.inputContainer input[type="text"] {
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.inputContainer button {
+  padding: 10px 15px;
+  width: 200px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+}
